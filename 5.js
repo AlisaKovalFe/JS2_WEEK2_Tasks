@@ -8,16 +8,15 @@
 */
 
 let luggage = ['пакет', 'мяч', 'тапки', 'когтеточка', 'коробка', 'миска', 'мята'];
-let startIndex = 2;
-let quantityElem = 3;
 let chosenLuggage = [];
 
 const newLuggage = (arr) => {
-    let newArr = []
-    for (let i = startIndex; i < startIndex + quantityElem; i++) {
-        newArr.push(arr[i])
+    let startIndex = 2;
+    let quantity = 3;
+    for (let i = startIndex; i < startIndex + quantity; i++) {
+        chosenLuggage.push(arr[i])
     }
-    return newArr
+    return chosenLuggage
 
 }
 

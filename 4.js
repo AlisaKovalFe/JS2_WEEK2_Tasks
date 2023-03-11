@@ -7,12 +7,12 @@
 
 
 let numbers = [2, 4, 7, 4, 7, 2];
-let numberElem = 4;
+let number = 4;
 
 const lastIndexElement = (arr) => {
     let lastIndex
     for (let i = 0; i < arr.length; i++) {
-        lastIndex = arr.lastIndexOf(numberElem)
+        lastIndex = arr.lastIndexOf(number)
     }
     return lastIndex
 

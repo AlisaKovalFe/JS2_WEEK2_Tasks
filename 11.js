@@ -6,12 +6,19 @@
 
 
 
-const getZippedArrays = (keys, values) => {
+const getZippedArrays = (keysArr, valuesArr) => {
     let result = {}
-    for (let i = 0; i < keys.length; i++) {
-        result[keys[i]] = values[i]
+    for (let i = 0; i < keysArr.length; i++) {
+        result[keysArr[i]] = valuesArr[i]
     }
 
     return result
+
+    //reduce 
+    // return keysArr.reduce(function (acc, key, index) {
+    //     acc[key] = valuesArr[index]
+    //     return acc
+    // }, {})
 }
 console.log(getZippedArrays(["color", "height", "weight", "depth"], ["чёрный", "100", "50", "20"]));
+

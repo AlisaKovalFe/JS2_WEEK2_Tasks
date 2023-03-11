@@ -13,6 +13,17 @@ const getDiet = (arr, limitCalories) => {
             return i
         }
     }
+    return arr.length
+
+    //reduce - здесь надо думать , тут неправильно
+    //     return arr.reduce(function (acc, cur, index, array) {
+    //         acc += cur
+    //         if (acc > limitCalories) {
+    //             console.log(index);
+    //             return index
+    //         }
+    //         return acc
+    //     }, 0)
 }
 
-console.log(getDiet([20, 21, 15, 20, 13, 10, 29, 22, 10], 150));
+console.log(getDiet([10, 20, 30, 40, 90], 100));

@@ -14,6 +14,14 @@ const getRepeats = (arr) => {
         }
     }
     return result
+
+    //reduce
+    // return arr.reduce(function (acc, cur) {
+    //     !acc[cur] ? acc[cur] = 1 : acc[cur]++
+    //     return acc
+    // }, {})
+
+
 }
 
 console.log(getRepeats(["картошка", "картошка", "кофе", "торт", "салат", "кофе", "торт", "картошка"]));

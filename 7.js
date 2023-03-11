@@ -17,11 +17,12 @@ const calculate = (firstNumber, secondNumber, operator) => {
     let result = (operator == '+') ? Number(firstNumber) + Number(secondNumber) :
         (operator == '-') ? Number(firstNumber) - Number(secondNumber) :
             (operator == '*') ? Number(firstNumber) * Number(secondNumber) :
-                (operator == '/') ? Number(firstNumber) / Number(secondNumber) :
-                    (!Number(firstNumber) || !Number(secondNumber)) ? 'не посчитаю, это не число' : // доделать
+                (operator == '/' && secondNumber != 0) ? Number(firstNumber) / Number(secondNumber) :
+                    (operator == '/' && secondNumber == 0) ? 'не буду делить на ноль ' :
+                        // (!Number(firstNumber) || !Number(secondNumber)) ? 'не посчитаю, это не число' : // доделать
                         ' ';
     return result
 
 }
 
-console.log(calculate(2, 'foo', '/'));
+console.log(calculate(2, 3, '*'));
