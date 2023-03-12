@@ -7,18 +7,18 @@
 
 
 const getZippedArrays = (keysArr, valuesArr) => {
-    let result = {}
-    for (let i = 0; i < keysArr.length; i++) {
-        result[keysArr[i]] = valuesArr[i]
-    }
+    // let result = {}
+    // for (let i = 0; i < keysArr.length; i++) {
+    //     result[keysArr[i]] = valuesArr[i]
+    // }
 
-    return result
+    // return result
 
     //reduce 
-    // return keysArr.reduce(function (acc, key, index) {
-    //     acc[key] = valuesArr[index]
-    //     return acc
-    // }, {})
+    return keysArr.reduce(function (acc, key, index) {
+        acc[key] = valuesArr[index]
+        return acc
+    }, {})
 }
 console.log(getZippedArrays(["color", "height", "weight", "depth"], ["чёрный", "100", "50", "20"]));
 
